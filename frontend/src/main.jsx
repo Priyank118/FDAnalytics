@@ -6,7 +6,7 @@ import { AuthProvider } from './context/AuthContext.jsx';
 import axios from 'axios';
 
 // --- THIS IS THE FIX ---
-axios.defaults.baseURL = 'http://localhost:5000'; // Set base URL for all requests
+axios.defaults.baseURL = 'https://fdanalytics-backend.onrender.com'; // Set base URL for all requests
 axios.defaults.withCredentials = true; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
