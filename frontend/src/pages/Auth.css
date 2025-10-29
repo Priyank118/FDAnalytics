@@ -1,0 +1,199 @@
+.auth-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Make it full viewport height */
+  /* Remove padding from here as the auth-panel will take full space */
+  box-sizing: border-box;
+}
+
+.auth-panel {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Make the panel itself fill the height */
+  /* max-width: 1100px; Remove max-width to let it expand */
+  min-height: auto; /* Remove fixed min-height */
+  background-color: #fff;
+  border-radius: 0; /* No border-radius for full screen */
+  box-shadow: none; /* No shadow for full screen */
+  overflow: hidden;
+}
+
+/* --- Illustration Side --- */
+.illustration-panel {
+  flex: 1; /* Takes 50% width */
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-size: cover; /* Added for random background images */
+  background-position: center; /* Added for random background images */
+}
+
+.illustration-panel img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure image fits well */
+}
+
+/* --- Form Side --- */
+.form-panel {
+  flex: 1; /* Takes 50% width */
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+.form-panel .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  text-align: left; /* Align logo left as per reference */
+}
+
+.form-panel h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left; /* Align heading left as per reference */
+  color: #1a1a2e;
+}
+
+.form-panel .subtitle {
+  color: #666;
+  margin-bottom: 40px;
+  text-align: left; /* Align subtitle left as per reference */
+}
+
+.form-panel .input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-panel label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-panel input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.form-panel input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 40px; /* Adjust based on label height */
+    cursor: pointer;
+    color: #999;
+}
+
+.form-panel .form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.form-panel .checkbox-group { /* New style for remember me */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-panel .checkbox-group input[type="checkbox"] {
+    width: auto; /* Override full width input */
+    margin: 0;
+    accent-color: var(--primary-color); /* Highlight checkbox */
+}
+
+
+.form-panel a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.form-panel button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #e0e0e0; /* Default neutral button */
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+.form-panel button[type="submit"]:hover {
+    background-color: #d0d0d0;
+    transform: none; /* Remove previous transform */
+    box-shadow: none;
+}
+/* Primary button style for login/signup */
+.form-panel .btn-primary { 
+    background: linear-gradient(45deg, var(--primary-color), #007bff);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+}
+.form-panel .btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.form-panel .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #aaa;
+  margin: 30px 0;
+}
+
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google-btn:hover {
+    background-color: #e0e0e0;
+}

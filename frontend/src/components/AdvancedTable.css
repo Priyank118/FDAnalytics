@@ -1,0 +1,114 @@
+/* frontend/src/components/AdvancedTable.css */
+
+.advanced-table-container {
+  width: 100%;
+  background-color: var(--card-bg); /* Use a dark background variable */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  color: var(--text-color); /* Use a general text color variable */
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.entries-per-page select,
+.search-input input {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color); /* Darker border */
+  border-radius: 6px;
+  background-color: var(--input-bg); /* Darker input background */
+  color: var(--text-color);
+}
+
+.advanced-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.advanced-table th, .advanced-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.advanced-table th {
+  background-color: var(--header-bg); /* Darker header background */
+  color: var(--text-color-light); /* Lighter text for header */
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.advanced-table th .sort-icon {
+  margin-left: 8px;
+  opacity: 0.5;
+}
+
+/* --- THE KEY CHANGE IS HERE --- */
+.advanced-table tbody tr:hover {
+  background-color: var(--hover-bg); /* A subtle dark hover color */
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+.action-buttons .action-btn {
+    background-color: var(--button-secondary-bg); /* Use your secondary button background */
+    color: var(--button-secondary-text); /* Use your secondary button text color */
+}
+.action-buttons .action-btn:hover {
+    background-color: var(--button-secondary-hover-bg); /* Darker hover for secondary */
+}
+.action-buttons .delete-btn {
+    background-color: var(--delete-button-bg); /* Use your delete button background */
+    color: var(--delete-button-text); /* Use your delete button text color */
+}
+.action-buttons .delete-btn:hover {
+    background-color: var(--delete-button-hover-bg); /* Darker hover for delete */
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+}
+
+.pagination-controls input {
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin: 0 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.pagination-buttons button {
+  padding: 8px 12px;
+  margin: 0 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--button-secondary-bg); /* Use consistent button styling */
+  color: var(--button-secondary-text);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+    background-color: var(--button-secondary-hover-bg);
+}
+
+.pagination-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

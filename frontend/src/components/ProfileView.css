@@ -1,0 +1,68 @@
+.profile-view-container {
+  color: #fff;
+}
+.profile-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.profile-view-header h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #b0c4de;
+  margin: 0;
+}
+.edit-profile-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.completion-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(90deg, rgba(255, 165, 0, 0.2), rgba(255, 165, 0, 0.1));
+  border: 1px solid orange;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.completion-info { flex-grow: 1; }
+.completion-info strong { font-size: 1.1rem; }
+.completion-info p { margin: 5px 0 0; color: #b0c4de; }
+.progress-bar-container {
+  width: 200px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.progress-bar {
+  height: 100%;
+  background-color: orange;
+  border-radius: 4px;
+}
+.complete-now-btn { background-color: orange; color: #1a1a2e; }
+.profile-main-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+}
+.profile-main-info h2 { font-size: 2rem; margin: 0; }
+.profile-main-info p { color: #b0c4de; margin: 5px 0 0; }
+.profile-bio-card {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+}
+.profile-bio-card h3 { margin-top: 0; font-size: 1.2rem; font-weight: 600; }
+.profile-bio-card p { color: #b0c4de; line-height: 1.7; }

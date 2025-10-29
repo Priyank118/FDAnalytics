@@ -1,0 +1,174 @@
+.my-team-container {
+  color: #fff;
+}
+.my-team-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.team-management-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.add-player-form, .roster-list {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+}
+.add-player-form h3, .roster-list h3 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+.add-player-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+.roster-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.roster-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.remove-btn {
+  background: transparent;
+  color: #ff6b6b;
+  border: none;
+}
+
+/* Add/Update these styles in MatchDetailsPage.css */
+
+.edit-mode-container {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--primary-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.edit-grid.full { /* Style for the expanded grid */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust columns */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.edit-stat-input {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.edit-stat-input label {
+  display: block;
+  font-size: 0.85rem;
+  color: #b0c4de;
+  margin-bottom: 5px;
+}
+
+.edit-stat-input input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Specific style for survival time inputs */
+.edit-stat-input.time div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.edit-stat-input.time input {
+    width: 60px; /* Smaller inputs for time */
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.edit-actions .delete-btn { /* Style delete button specifically */
+    margin-right: auto; /* Push delete button to the left */
+    background-color: #4a1e1e;
+    color: #ff6b6b;
+}
+.edit-actions .delete-btn:hover {
+    background-color: #5a2e2e;
+}
+
+/* Add these styles to MatchDetailsPage.css */
+
+.editable-header .header-edit-btn {
+    position: absolute; /* Position edit button nicely */
+    right: 30px;
+    top: 20px; /* Adjust as needed */
+}
+
+.header-edit-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 60%; /* Adjust width */
+}
+.header-edit-form input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    flex-grow: 1;
+}
+.header-edit-form input[type="number"] {
+    max-width: 80px; /* Smaller width for rank */
+}
+
+/* Add these styles to MatchDetailsPage.css */
+.add-player-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Add/Update these styles in MatchDetailsPage.css */
+
+.editable-header { /* Add relative positioning */
+    position: relative;
+}
+
+.editable-header .header-edit-btn {
+    position: absolute;
+    right: 350px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+}
+
+.header-edit-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 60%; /* Adjust width */
+}
+.header-edit-form input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    flex-grow: 1;
+}
+.header-edit-form input[type="number"] {
+    max-width: 80px; /* Smaller width for rank */
+}
+
+/* ... (rest of your CSS) ... */

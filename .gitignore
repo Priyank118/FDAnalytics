@@ -1,0 +1,17 @@
+# --- Python/Backend ---
+backend/venv/
+backend/app/__pycache__/
+backend/app/database.db
+*.pyc
+
+# --- SECRET FILES (CRITICAL) ---
+# This hides your Google Cloud key
+backend/gcp_key.json
+# This will hide your local secrets file
+backend/.env
+
+# --- Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.DS_Store

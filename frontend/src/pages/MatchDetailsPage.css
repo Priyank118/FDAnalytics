@@ -1,0 +1,197 @@
+/* frontend/src/pages/MatchDetailsPage.css */
+.details-page-container {
+    color: #fff;
+}
+
+.back-link {
+    color: #b0c4de;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+.back-link:hover {
+    color: var(--primary-color);
+}
+
+.details-header {
+    /* --- Main Header Styling --- */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space items out */
+    align-items: center; /* Vertically center items */
+}
+
+/* --- Heading and Edit Button Group --- */
+.header-title-group {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between title and button */
+}
+
+.details-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* --- Edit Button Styling (Removed absolute positioning) --- */
+.header-edit-btn {
+    /* Button styles (like background, color) come from global button styles */
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font */
+}
+
+/* --- Meta Info Styling (Date, Map, Rank) --- */
+.header-meta {
+    display: flex;
+    gap: 30px;
+    text-align: right;
+}
+
+.meta-item {
+    font-size: 1rem;
+    color: #b0c4de;
+}
+
+.meta-item span {
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* --- Header Edit Form Styling --- */
+.header-edit-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%; /* Take full width when editing */
+}
+.header-edit-form h1 { /* Style the heading in edit mode */
+    font-size: 1.5rem; /* Slightly smaller */
+    margin-right: auto; /* Push inputs/buttons to the right */
+}
+.header-edit-form input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+}
+.header-edit-form input[name="map_name"] {
+    width: 150px;
+}
+.header-edit-form input[type="number"] {
+    width: 80px;
+}
+
+/* --- Player Performance Section Styling --- */
+.player-performance-section {
+    margin-bottom: 40px;
+}
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+.player-performance-section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* --- Edit Player Form Styling --- */
+.edit-mode-container {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--primary-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+.edit-grid.full {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.edit-stat-input {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+.edit-stat-input label {
+  display: block;
+  font-size: 0.85rem;
+  color: #b0c4de;
+  margin-bottom: 5px;
+}
+.edit-stat-input input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: #fff;
+  box-sizing: border-box;
+}
+.edit-stat-input.time div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.edit-stat-input.time input { width: 60px; }
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.edit-actions .delete-btn {
+    margin-right: auto;
+    background-color: #4a1e1e;
+    color: #ff6b6b;
+}
+.edit-actions .delete-btn:hover { background-color: #5a2e2e; }
+
+/* --- Add Player Button --- */
+.add-player-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.recommendations-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+.recommendations-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.recommendations-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.recommendations-section li {
+  margin-bottom: 8px;
+  color: #b0c4de;
+}

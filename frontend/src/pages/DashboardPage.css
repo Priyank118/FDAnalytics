@@ -1,0 +1,18 @@
+.dashboard-page-layout {
+  display: flex;
+  background-color: var(--dark-bg);
+}
+
+.main-content-wrapper {
+  flex-grow: 1;
+  margin-left: 260px; /* Same width as the sidebar */
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  padding: 40px;
+  padding-top: 100px; /* Space for the fixed header (80px height + 20px padding) */
+  min-height: 100vh;
+  box-sizing: border-box;
+}

@@ -1,0 +1,82 @@
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.overview-header h1 {
+  margin: 0;
+}
+
+.player-filter select {
+  padding: 10px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+/* --- THIS IS THE FIX --- */
+/* This gives the dropdown options a dark background so the text is visible */
+.player-filter select option {
+  background: #2c2c3e; /* A dark background for the items */
+  color: #f0f0f0;      /* Light text for the items */
+}
+
+.overview-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.recommendations-overview {
+    grid-column: 1 / -1; /* Make it span full width below charts */
+    margin-top: 30px;
+}
+
+.recommendations-overview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.recommendations-overview li {
+    margin-bottom: 10px;
+    color: var(--text-color); /* Adjust color if needed */
+    padding-left: 1.5em; /* Indent */
+    position: relative;
+}
+.recommendations-overview li::before { /* Add bullet point */
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.stats-grid.full {
+  display: grid;
+  /* This creates 4 columns on large screens, 2 on medium, 1 on small */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 20px;
+  margin-bottom: 30px;
+}
