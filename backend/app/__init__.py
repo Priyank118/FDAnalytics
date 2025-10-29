@@ -12,7 +12,7 @@ oauth = OAuth()
 def create_app():
     app = Flask(__name__)
     
-    # Securely loads secrets from .env file or deployment server
+    # This code reads the variables loaded by run.py
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     app.config['GOOGLE_CLIENT_ID'] = os.environ.get('GOOGLE_CLIENT_ID')
@@ -29,7 +29,6 @@ def create_app():
         client_kwargs={'scope': 'openid email profile'}
     )
 
-    # Loads the allowed frontend URL from the environment
     CORS(app, supports_credentials=True, origins=os.environ.get('FRONTEND_URL')) 
 
     with app.app_context():
