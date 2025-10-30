@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
     setMessage('');
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { username, password });
+      const response = await axios.post('/api/login', { username, password });
       login(response.data.user);
       navigate('/dashboard');
     } catch (error) {
@@ -55,7 +55,7 @@ function Login() {
       <div className="separator">or</div>
 
   {/* This is now an anchor tag pointing to the backend */}
-  <a href="http://localhost:5000/api/google/login" className="google-btn">
+  <a href="https://fdanalytics-backend.onrender.com/api/google/login" className="google-btn">
     <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google icon" width="20" style={{marginRight: '10px'}} />
     Sign In with Google
   </a>

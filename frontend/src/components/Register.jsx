@@ -29,7 +29,7 @@ function Register() {
     }
     setMessage('');
     try {
-      const response = await axios.post('http://localhost:5000/api/register', formData);
+      const response = await axios.post('/api/register', formData);
       setMessage(response.data.message);
       setTimeout(() => {
         navigate('/login');
@@ -80,7 +80,7 @@ function Register() {
         <button type="submit" className="btn-primary">Sign Up</button> {/* Apply new class */}
       </form>
       <div className="separator">or</div>
-<a href="http://localhost:5000/api/google/login" className="google-btn">
+<a href="https://fdanalytics-backend.onrender.com/api/google/login" className="google-btn">
   <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google icon" width="20" style={{marginRight: '10px'}} />
   Sign Up with Google
 </a>
