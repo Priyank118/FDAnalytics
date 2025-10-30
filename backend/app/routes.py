@@ -65,7 +65,8 @@ def google_callback():
             db.session.add(user)
             db.session.commit()
         login_user(user)
-    return redirect('http://localhost:5173/dashboard')
+    frontend_url = os.environ.get('FRONTEND_URL', 'http://localhost:5173')
+    return redirect(f"{frontend_url}/dashboard")
 
 # --- USER, PROFILE, STATUS & LOGOUT ROUTES ---
 
