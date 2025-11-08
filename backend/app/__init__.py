@@ -12,12 +12,16 @@ oauth = OAuth()
 def create_app():
     app = Flask(__name__)
     
-    # This code reads the variables loaded by run.py
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     app.config['GOOGLE_CLIENT_ID'] = os.environ.get('GOOGLE_CLIENT_ID')
     app.config['GOOGLE_CLIENT_SECRET'] = os.environ.get('GOOGLE_CLIENT_SECRET')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    # ✅ Required for cross-origin session cookies (Netlify <-> Render login)
+    app.config["SESSION_COOKIE_SECURE"] = True
+    app.config["SESSION_COOKIE_SAMESITE"] = "None"
+    app.config["SESSION_COOKIE_HTTPONLY"] = True
 
     db.init_app(app)
     login_manager.init_app(app)
@@ -29,10 +33,18 @@ def create_app():
         client_kwargs={'scope': 'openid email profile'}
     )
 
-    CORS(app, supports_credentials=True, origins=os.environ.get('FRONTEND_URL')) 
+    # ✅ origins MUST be a list, not a string
+    CORS(
+        app,
+        supports_credentials=True,
+        origins=[os.environ.get("FRONTEND_URL")],
+        allow_headers=["Content-Type", "Authorization"],
+        methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    )
 
     with app.app_context():
         from .models import User
+
         @login_manager.user_loader
         def load_user(user_id):
             return User.query.get(int(user_id))
